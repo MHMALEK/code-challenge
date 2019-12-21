@@ -1,15 +1,15 @@
 import React from "react";
 import { ThemeProvider } from "styled-components/macro";
 import GlobalFontIcons from "./components/base-ui/icon/font-icon";
-import GlobalStyles from "./styles/global-styles";
 import SmaplePage from "./components/pages";
-import { PrimaryTheme } from "./styles";
+import { PrimaryTheme } from "./styled-component";
+import GlobalStyle from "./styled-component/global-styles";
 
 function App() {
 	return (
 		<div className='App'>
 			<ThemeProvider theme={PrimaryTheme}>
-				<GlobalStyles />
+				<GlobalStyle />
 				<GlobalFontIcons />
 				<SmaplePage />
 			</ThemeProvider>

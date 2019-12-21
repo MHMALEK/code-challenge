@@ -3,7 +3,6 @@ export const PrimaryTheme = {
 	colors: {
 		primary: "#de6449",
 		placeholder: "#b6b9ba",
-		borders: "#d2d1d1",
 		yellow: "#f7e61b",
 		charcoalGrey: "#363e40",
 		charcoalGey50: "#363e40",

@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
-import Icon from "./components/base-ui/icon";
+import Icon from "../base-ui/icon";
 import Column from "../base-ui/grid/column";
-import { PrimaryTheme } from "../../styles";
+import Text from "../base-ui/typography/text/text";
+import { PrimaryTheme } from "../../styled-component";
 
 const TopRightColumn = styled(Column)`
 	flex: 0.5;
@@ -31,6 +32,7 @@ const Figure = styled.figure`
 	margin: 0;
 	line-height: 0;
 	padding: 10px 10px 10px 10px;
+	position: relative;
 `;
 
 const TopTitleLeftSide = styled.div``;
@@ -89,8 +91,12 @@ const FieldTitle = styled.div`
 
 const FieldValue = styled.div`
 	font-weight: 600;
-	font-size: 1.2rem;
+	font-size: 14px;
 	color: ${(props) => props.theme.colors.charcoalGrey};
+	@media screen and (max-width: ${(props) =>
+			props.theme.mediaQueriesBreackPoints.tablet}) {
+		font-size: 1.1rem;
+	}
 `;
 
 const Price = styled.div`
@@ -198,7 +204,10 @@ const Small = styled.small`
 const QuestionMarkIcon = styled(Icon)`
 	color: ${(props) => props.theme.colors.charcoalGey18};
 	font-size: 1.2em;
-	margin-left: 2rem;
+	margin-left: 0.6rem;
+	&:hover {
+		cursor: pointer;
+	}
 `;
 
 const PriceText = styled.p`
@@ -258,6 +267,9 @@ const LastRowController = styled.div`
 
 const PriceHandler = styled.div`
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 85%;
 	@media screen and (max-width: ${(props) =>
 			props.theme.mediaQueriesBreackPoints.tablet}) {
 		display: block;

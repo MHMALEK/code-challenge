@@ -4,10 +4,12 @@ import Icon from "../icon/icon";
 
 const StarsIconOutlined = styled(Icon)`
 	color: ${(props) => props.theme.colors.yellow};
+	font-size: 14px;
 `;
 
 const StarsIconFilled = styled(Icon)`
 	color: ${(props) => props.theme.colors.yellow};
+	font-size: 14px;
 `;
 
 const StarsReview = ({ stars }) => {

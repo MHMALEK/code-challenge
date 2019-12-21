@@ -19,7 +19,7 @@ const CardImageCaption = styled.figcaption`
 	top: 20px;
 	left: 0;
 	background-color: #353e40;
-	padding: 5px 6px 5px 15px;
+	padding: 5px 6px 5px 17px;
 	color: white;
 	font-family: "Open Sans";
 `;

@@ -1,13 +1,12 @@
 import React from "react";
-import LikeButton from "./components/base-ui/like-button";
-import TriangleBadge from "./components/base-ui/triangle-badge";
-import { toUpperCase } from "./utils/strings";
+import LikeButton from "../base-ui/like-button";
+import TriangleBadge from "..//base-ui/triangle-badge";
+import { toUpperCase } from "../../utils/strings";
 import Cell from "../base-ui/grid/cell";
 import StarsReview from "../base-ui/rate-and-review";
+import Tooltip from "../base-ui/tooltip";
 import Column from "../base-ui/grid/column";
 import Text from "../base-ui/typography/text/text";
-import { PrimaryTheme } from "../../styles";
-import SubTitle from "../base-ui/typography/subtitle/subtitle";
 import Title from "../base-ui/typography/title/title";
 import {
 	Card,
@@ -54,6 +53,7 @@ import {
 	FlashIcon
 } from "./styledComponents";
 import Bold from "../base-ui/typography/bold";
+import { PrimaryTheme } from "../../styled-component";
 
 const SampleComponent = () => {
 	return (
@@ -92,10 +92,8 @@ const SampleComponent = () => {
 							<Container>
 								<TopTitleLeftSide>
 									<Title>Jeano sun oddysey 45.2</Title>
-									<SubTitle>
-										<span>2001</span>
-										<span>split, Croatia</span>
-									</SubTitle>
+									<span>2001 </span>
+									<span>split, Croatia</span>
 								</TopTitleLeftSide>
 
 								<LikeButtonWrapper>
@@ -205,7 +203,9 @@ const SampleComponent = () => {
 										<Small>
 											<Bold>weekly</Bold>
 										</Small>
-										<QuestionMarkIcon name='help'>?</QuestionMarkIcon>
+										<Tooltip content={<p>do you need help Really?</p>}>
+											<QuestionMarkIcon name='help'>?</QuestionMarkIcon>
+										</Tooltip>
 									</Price>
 								</PriceHandler>
 							</PriceContainer>
@@ -213,7 +213,7 @@ const SampleComponent = () => {
 								<BookingText>
 									<FlashIcon name='flash' />
 									<Bold>
-										<small>Direct Booking</small>
+										<small>{toUpperCase("Direct Booking")}</small>
 									</Bold>
 								</BookingText>
 								<TriangleBadge> view details </TriangleBadge>

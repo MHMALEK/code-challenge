@@ -39,6 +39,9 @@ const Middle = styled.div`
 const Wrapper = styled.div`
 	display: flex;
 	position: relative;
+	&:hover {
+		cursor: pointer;
+	}
 `;
 
 export default ({ children }) => (
