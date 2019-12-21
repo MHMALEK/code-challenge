@@ -30,5 +30,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "styled-components": "^4.4.1"
   }
 }
